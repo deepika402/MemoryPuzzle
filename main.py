@@ -4,7 +4,7 @@ from pygame.locals import *
 FPS = 30 # frames per second, the general speed of the program
 WINDOWWIDTH = 840 # size of window's width in pixels
 WINDOWHEIGHT = 480 # size of windows' height in pixels
-REVEALSPEED = 8# speed boxes' sliding reveals and covers
+REVEALSPEED = 2# speed boxes' sliding reveals and covers
 BOXSIZE = 80 # size of box height & width in pixels
 GAPSIZE = 20 # size of gap between boxes in pixels
 BOARDWIDTH = 5 # number of columns of icons
