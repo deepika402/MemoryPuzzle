@@ -8,12 +8,10 @@ REVEALSPEED = 8# speed boxes' sliding reveals and covers
 BOXSIZE = 80 # size of box height & width in pixels
 GAPSIZE = 20 # size of gap between boxes in pixels
 BOARDWIDTH = 5 # number of columns of icons
-BOARDHEIGHT = 4 # number of rows of icons
+BOARDHEIGHT = 4# number of rows of icons
 assert (BOARDWIDTH * BOARDHEIGHT) % 2 == 0, 'Board needs to have an even number of boxes for pairs of matches.'
 XMARGIN = int((WINDOWWIDTH - (BOARDWIDTH * (BOXSIZE + GAPSIZE))) / 2)
 YMARGIN = int((WINDOWHEIGHT - (BOARDHEIGHT * (BOXSIZE + GAPSIZE))) / 2)
-
-
 
 #            R    G    B
 GRAY     = (100, 100, 100)
@@ -27,10 +25,10 @@ ORANGE   = (255, 128,   0)
 PURPLE   = (255,   0, 255)
 CYAN     = (  0, 255, 255)
 
-BGCOLOR = NAVYBLUE
-LIGHTBGCOLOR = GRAY
+BGCOLOR = GRAY
+LIGHTBGCOLOR = BLUE
 BOXCOLOR = WHITE
-HIGHLIGHTCOLOR = BLUE
+HIGHLIGHTCOLOR = GRAY
 
 DONUT = 'donut'
 SQUARE = 'square'
@@ -43,7 +41,7 @@ ALLSHAPES = (DONUT, SQUARE, DIAMOND, LINES, OVAL)
 assert len(ALLCOLORS) * len(ALLSHAPES) * 2 >= BOARDWIDTH * BOARDHEIGHT, "Board is too big for the number of shapes/colors defined."
 
 def main():
-  user = str(input("Enter the player name:"))
+    user = str(input("Enter the player Name:"))
     global FPSCLOCK, DISPLAYSURF
     pygame.init()
     FPSCLOCK = pygame.time.Clock()
@@ -279,7 +277,7 @@ def gameWonAnimation(board):
 
 
 def hasWon(revealedBoxes):
-  print(FPSCLOCK)
+    print(FPSCLOCK)
     # Returns True if all the boxes have been revealed, otherwise False
     for i in revealedBoxes:
         if False in i:
